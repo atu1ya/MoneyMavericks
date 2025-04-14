@@ -75,11 +75,11 @@ all_options_sorted = sorted(all_options, key=lambda x: x['personal_share'], reve
 # Print results in order from best to worst
 print("\nALL OPTIONS RANKED FROM BEST TO WORST:")
 print("=" * 120)
-print(f"{'Rank':<6} {'Option':<20} {'Total Value':<15} {'Fee':<10} {'Net Value':<15} {'Inhabitants':<15} {'Personal Share':<15}")
+print(f"{'Rank':<6} {'Option':<30} {'Total Value':<15} {'Fee':<15} {'Net Value':<15} {'Inhabitants':<15} {'Personal Share':<15}")
 print("-" * 120)
 
 for i, option in enumerate(all_options_sorted):
-    print(f"{i+1:<6} {option['description']:<20} {option['total_value']:,d} SeaShells{' ':<3} {option['fee']:,d} SeaShells{' ':<2} {option['net_value']:,d} SeaShells{' ':<3} {option['inhabitants']}{' ':<13} {option['personal_share']:,.0f} SeaShells")
+    print(f"{i+1:<6} {option['description']:<30} {option['total_value']:,d} SeaShells{' ':<3} {option['fee']:,d} SeaShells{' ':<3} {option['net_value']:,d} SeaShells{' ':<3} {option['inhabitants']:<15} {option['personal_share']:,.0f} SeaShells")
 
 # Print top recommendation
 best_option = all_options_sorted[0]
